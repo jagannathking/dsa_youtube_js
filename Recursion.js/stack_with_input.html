@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stack with input and button</title>
+    <script>
+        let data=[];
+        let currentSize=data.length;
+        let max=5;
+        function push(){
+            let newVal=document.getElementById('newEl').value;
+            if(currentSize>=max){
+                alert("stack is full ypu can not add"+newVal);
+            }else{
+                data[currentSize]=newVal;
+                currentSize+=1;
+                document.getElementById('newEl').value=" ";
+                console.warn("element added")
+            }
+
+        }
+        function pop(){
+            if(currentSize >0){
+                currentSize -=1;
+                data.length=currentSize;
+            }else{
+                alert("stack is alredy empty");
+            }
+        }
+        function display(){
+            for(let i=0;i<currentSize-1;i++){
+                console.warn("el no.",i,"and value is",data[i]);
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="Enter stack Element" id="newEl">
+    <button onclick="push()">Add element to stack</button>
+    <button onclick="pop()">Remove Element to stack</button>
+    <button onclick="display()">Display all Element of stack </button>
+    
+</body>
+</html

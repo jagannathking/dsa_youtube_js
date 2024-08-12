@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Search element in array</title>
+    <script>
+        // let data=[20,40,60,5,10,70,80,99];
+        // let item=80;
+        // let index=undefined;
+        // for(let i=0;i<=data.length-1;i++){
+        //     // console.warn(`data ${i} is ${data[i]}`)
+        //     if(data[i]===item){
+        //         index=i;
+        
+        //     }
+        // }
+        // console.warn(index);
+        function searchElement(){
+            let data=[20,40,60,5,10,70,80,99];
+
+            let item=document.getElementById("searchEl").value;
+        
+            let index=undefined;
+
+            for(let i=0;i<=data.length-1;i++){
+                if(data[i]===parseInt(item)){
+                    index=i;
+                    break;
+                }
+            }
+            console.warn(index);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="enter value" id="searchEl">
+    <button onclick="searchElement()">search Element</button>
+    
+</body>
+</html>

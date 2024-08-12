@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+         let data=[9,45,2,8,45,23,7,78,0,11,41,77];
+        // for(let i=0;i< data.length;i++){
+        // //     console.log(data[i])
+        // console.log(`array ${i} is ${data[i]}`)
+        //  }
+        //Accessing array
+        // let x=data[7];
+        // console.log(x)
+        // ===============================
+        function getElement(){
+            // console.log("hello")
+            let el=document.getElementById("element").value;
+            // console.log(el)
+            // console.log(data[el])
+            if(el<=data.length&&typeof parseInt==="number"){   // Validation
+                console.log(data[el])
+            }else{
+ 
+                console.log("please enter valid value")
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="element">
+    <button onclick="getElement()">Get Element</button>
+    
+</body>
+</html>

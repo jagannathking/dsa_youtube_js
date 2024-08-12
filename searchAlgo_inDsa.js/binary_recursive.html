@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Binary search with Recursive approach</title>
+    <script>
+        let data = [10, 15, 18, 34, 57,];
+        let find = 57;
+        let position = undefined;
+        let start = 0;
+        let end = data.length - 1;
+        function recursiveBinary(data, start, end) {
+            mid = Math.floor((start + end)/2);
+            if (data[mid] === find) {
+                position = mid;
+                return true;
+            } else if (data[mid] < find) {
+                recursiveBinary(data, mid+1, end)
+            } else {
+                recursiveBinary(data, start, mid-1)
+            }
+
+        }
+        recursiveBinary(data, start, end)
+        console.log(position);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
